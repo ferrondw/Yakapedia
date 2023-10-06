@@ -8,10 +8,16 @@ Just download and drag the .cs scripts into your project, that's it!
 Once you got the script in your project, you can call Yakapedia methods from other scripts, such as making screenshots, checking if there is internet etc.
 Examples:
 ```cs
-Yakapedia.SetInt("interestingInt", 34);
+Yakapedia.SetInt("interestingInt", 34); // Save 34 to the save file!! >:0
 
 public int boringInt = 0;
 boringInt = Yakapedia.GetInt("interestingInt") // boringInt is now 34! :D
+
+Yakapedia.SelectSaveFile(1); // Hop over to another save file, clean and empty like by brain :/
+
+Yakapedia.DeleteKey("interestingInt"); // You can't do this :0 It doesn't exist in this save file!!
+
+Yakapedia.Log("I'm very sad that \"interestingInt\" can't be deleted :(");
 ```
 
 ## Content
