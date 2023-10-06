@@ -21,10 +21,10 @@ Yakapedia.Log("I'm very sad that \"interestingInt\" can't be deleted :(");
 ```
 
 ## Content
-Since there are a lot of scripts, they are listed here in their corresponding regions (without explanation, the names mostly speak for themselves, I also won't list any private methods):
+Since there are a lot of methods, they are listed here in their corresponding regions (without explanation, the names mostly speak for themselves, I also won't list any private methods):
 
-#### BetterPlayerPrefs
-##### Public Get / Set Methods
+### BetterPlayerPrefs
+#### Public Get / Set Methods
 - SetString(string key, string value)
 - GetString(string key, string defaultValue = default)
 - SetInt(string key, int value)
@@ -61,20 +61,20 @@ Since there are a lot of scripts, they are listed here in their corresponding re
 - HasKey(string key)
 - DeleteKey(string key)
 
-##### Public Save File Methods
+#### Public Save File Methods
 - SelectSaveFile(int index)
 - DeleteSaveFile(int index, int saveToLoad = 0)
 - DeleteCurrentSaveFile(int saveToLoad = 0)
 - IsSaveFileEmpty(int index)
 
-#### Vibration (Android only)
+### Vibration (Android only)
 - StartVibration()
 - StopVibration()
 - Vibrate(long milliseconds)
 - Vibrate(long[] pattern, int repeat)
 - IsAndroid()
 
-#### MethodExtenders
+### MethodExtenders
 - ArrayContainsItem<T>(this T[] array, T item)
 - SortArray<T>(this T[] array)
 - InvertColor(this Color inputColor)
@@ -95,7 +95,7 @@ Since there are a lot of scripts, they are listed here in their corresponding re
 - RandomizeRotation2D(this Transform transform)
 - ToggleActive(this GameObject gameObject)
 
-#### Miscellaneous
+### Miscellaneous
 - FloatToMinutesSeconds(float value)
 - FloatToHoursMinutes(float value)
 - RandomBool()
@@ -115,6 +115,6 @@ Since there are a lot of scripts, they are listed here in their corresponding re
 - SetGlobalVolume(float volume)
 - StopAllAudioSources()
 
-#### Logger
+### Logger
 - Log(string message)
 - GetAllLogs()
