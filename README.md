@@ -1,20 +1,17 @@
 ![Yakapedia Logo](Yakapedia.png)
-**A few C# scripts with a lot of useful methods (includes a custom logger, save system, method extenders, vibration and more!)**
+**Classes that make coding in Unity (C#) MUCH easier! (includes a logger, save system, method extenders, vibration and more!)**
 
-## Information & Updates
+## Information
 This project is long from complete, and is still going strong on the development part. That said there are some bugs here and there, so apologies for that!
 
-And I know the documentation is not complete, but it's a long process set up and I am changing it to a wiki page. so no more weird dropdowns haha. I wanted to push out this 'first' big update A.S.A.P.
+The [wiki](https://github.com/ferrondw/Yakapedia/wiki) is empty for a small while, wanted to lay the groundwork first, so yeah docs will be up soon!
 
-Another thing on the to-do list is make all the .cs files .dll files and make sure Yakapedia as a whole is thread safe.
 Anyways a LOT of effort was put into these scripts, so I hope y'all enjoy it!
 
 ## Prerequisites
 You know, I'm not THAT smart, so there are some packages that Yakapedia uses. These include:
-- Unity
-- Json.Net (Newtonsoft.Json)
-
-Yeah that's it 🤷
+- [Unity](https://unity.com)
+- [Json.Net (Newtonsoft.Json)](https://www.newtonsoft.com/json)
 
 ## Installation
 Just download and open the .unitypackage file (you can find it in releases), then import everything into your Unity project!
@@ -22,11 +19,11 @@ Alternatively, you can clone this repository and import all the scripts manually
 
 ## Usage
 Once you got the package in your project, you can call Yakapedia methods from other scripts.
-Examples can be found under the methods themselves. Since Yakapedia is a namespace, there are 2 ways it can be used:
+Examples can be found in the wiki page (still gotta make it). Since Yakapedia is a namespace, there are 2 ways it can be used:
 ```cs
 void Start()
 {
-  Yakapedia.Logger.Log("Yakapedia is AWESOME!!");
+  Yakapedia.Logger.Log("Me when Yakapedia: (❁´◡`❁)");
 }
 ```
 
@@ -37,12 +34,12 @@ using Yakapedia;
 
 void Start()
 {
-  Logger.Log("Yakapedia is AWESOME!!");
+  Logger.Log("Me when Yakapedia: (❁´◡`❁)");
 }
 ```
 
 ## Method List
-Since there are a lot of scripts and methods, they are listed here in their corresponding scripts (without explanation, the names mostly speak for themselves, private methods aren't listed):
+Don't know how to use these methods? Check out the [wiki](https://github.com/ferrondw/Yakapedia/wiki) for more information and examples about these methods!
 
 ### BetterPlayerPrefs
 - ``Set<T>(string key, T value = default)``
@@ -56,104 +53,11 @@ Since there are a lot of scripts and methods, they are listed here in their corr
 - ``IsSaveFileEmpty(int index)``
 
 ### Vibration
-<details>
-  <summary>
-  
-  ##### `Start()`
-  </summary>
-  
-  ##### Description
-  Starts vibration.
-
-  ##### Usage:
-  
-  ```cs
-  Yakapedia.Vibration.Start();
-  ```
-  ---
-</details>
-
-<details>
-  <summary>
-  
-  ##### `Stop()`
-  </summary>
-  
-  ##### Description
-  Stops vibration.
-
-  ##### Usage:
-  
-  ```cs
-  Yakapedia.Vibration.Stop();
-  ```
-  ---
-</details>
-
-<details>
-  <summary>
-  
-  ##### `Vibrate(long milliseconds)`
-  </summary>
-  
-  ##### Description
-  Starts vibration for a fixed amount of milliseconds.
-
-  ##### Parameters
-  - `long milliseconds` - Amount of milliseconds to vibrate for.
-
-  ##### Usage:
-
-  ```csharp
-  long duration = 1000; // Vibrate for 1 second
-  Yakapedia.Vibration.Vibrate(duration);
-  ```
-  ---
-</details>
-
-<details>
-  <summary>
-  
-  ##### `Vibrate(long[] pattern, int repeat)`
-  </summary>
-  
-  ##### Description
-  Starts vibration with a specified pattern.
-
-  ##### Parameters
-  - `long[] pattern` - An array representing the pattern of vibration in milliseconds.
-  - `int repeat` - The number of times to repeat the vibration pattern.
-
-  ##### Example:
-
-  ```cs
-  long[] pattern = new long[] { 0, 1000, 500, 1000 };
-  int repeat = 3;
-
-  Yakapedia.Vibration.Vibrate(pattern, repeat);
-  ```
-  ---
-</details>
-
-<details>
-  <summary>
-  
-  ##### `IsAndroid()`
-  </summary>
-  
-  ##### Description
-  Checks if you are on Android.
-
-  ##### Returns
-  Bool
-
-  ##### Usage:
-
-  ```cs
-  bool isAndroid = Yakapedia.Vibration.IsAndroid();
-  ```
-  ---
-</details>
+- ``Start()``
+- ``Stop()``
+- ``Vibrate(long milliseconds)``
+- ``Vibrate(long[] pattern, int repeat)``
+- ``IsAndroid()``
 
 ### MethodExtenders
 - ``ArrayContainsItem<T>(this T[] array, T item)``
@@ -198,102 +102,9 @@ Since there are a lot of scripts and methods, they are listed here in their corr
 - ``StopAllAudioSources()``
 
 ### Logger
-
-<details>
-  <summary>
-  
-  ##### `Log(string message)`
-  </summary>
-  
-  ##### Description
-  Logs a message into a file.
-
-  ##### Parameters
-  - `string message` - Message to log.
-
-  ##### Example:
-
-  ```cs
-  string msg = "Yakapedia is AWESOME!!";
-
-  Yakapedia.Logger.Log(msg);
-  ```
-  ---
-</details>
-
-<details>
-  <summary>
-  
-  ##### `GetAllLogs()`
-  </summary>
-  
-  ##### Description
-  Retrieves ALL the logs from the Logs folder.
-
-  ##### Returns
-  `Dictionary<string, string>` containing ALL the logs.
-
-  ##### Example:
-
-  ```cs
-  string msg = "Yakapedia is AWESOME!!";
-
-  Yakapedia.Logger.Log(msg);
-  ```
-  ---
-</details>
+- ``Log(string message)``
+- ``GetAllLogs()``
 
 ### Encryption
-<details>
-  <summary>
-  
-  ##### `RijndealEncrypt(byte[] plain, string password)`
-  </summary>
-  
-  ##### Description
-  Encrypts data into a byte[] using Rijndeal.
-
-  ##### Parameters
-  - `byte[] plain` - Data to encrypt.
-  - `string password` - Password to use for encryption.
-
-  ##### Returns
-  A byte[] containing the encrypted data.
-
-  ##### Usage:
-
-  ```cs
-  byte[] data = new();
-  private static readonly string pass = "Yakapedia is AWESOME!!";
-
-  Yakapedia.Encryption.RijndealEncrypt(data, pass);
-  ```
-  ---
-</details>
-
-<details>
-  <summary>
-  
-  ##### `RijndealDecrypt(byte[] encrypted, string password)`
-  </summary>
-  
-  ##### Description
-  Decrypts data into a byte[] using Rijndeal.
-
-  ##### Parameters
-  - `byte[] encrypted` - Data to decrypt.
-  - `string password` - Password to use for decryption.
-
-  ##### Returns
-  A byte[] containing the decrypted data.
-
-  ##### Usage:
-
-  ```cs
-  byte[] data = new();
-  private static readonly string pass = "Yakapedia is AWESOME!!";
-
-  Yakapedia.Encryption.RijndealDecrypt(data, pass);
-  ```
-  ---
-</details>
+- ``RijndealEncrypt(byte[] plain, string password)``
+- ``RijndealDecrypt(byte[] encrypted, string password)``
