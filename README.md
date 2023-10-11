@@ -3,7 +3,9 @@
 
 ## Information & Updates
 This project is long from complete, and is still going strong on the development part. That said there are some bugs here and there, so apologies for that!
-And I know the documentation is not complete, but it's a long process set up. I wanted to push out this 'first' big update A.S.A.P.
+
+And I know the documentation is not complete, but it's a long process set up and I am changing it to a wiki page. so no more weird dropdowns haha. I wanted to push out this 'first' big update A.S.A.P.
+
 Another thing on the to-do list is make all the .cs files .dll files and make sure Yakapedia as a whole is thread safe.
 Anyways a LOT of effort was put into these scripts, so I hope y'all enjoy it!
 
