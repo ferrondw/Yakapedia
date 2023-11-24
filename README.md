@@ -4,7 +4,7 @@
 ## Information
 This project is long from complete, and is still going strong on the development part. That said there are some bugs here and there, so apologies for that!
 
-The [wiki](https://github.com/ferrondw/Yakapedia/wiki) is empty for a small while, wanted to lay the groundwork first, so yeah docs will be up soon!
+The [wiki](https://github.com/ferrondw/Yakapedia/wiki) has been discontinued.
 
 Anyways a LOT of effort was put into these scripts, so I hope y'all enjoy it!
 
@@ -19,7 +19,7 @@ Alternatively, you can clone this repository and import all the scripts manually
 
 ## Usage
 Once you got the package in your project, you can call Yakapedia methods from other scripts.
-Examples can be found in the wiki page (still gotta make it). Since Yakapedia is a namespace, there are 2 ways it can be used:
+Since Yakapedia is a namespace, there are 2 ways it can be used:
 ```cs
 void Start()
 {
@@ -39,7 +39,6 @@ void Start()
 ```
 
 ## Method List
-Don't know how to use these methods? Check out the [wiki](https://github.com/ferrondw/Yakapedia/wiki) for more information and examples about these methods!
 
 ### BetterPlayerPrefs
 - ``Set<T>(string key, T value = default)``
