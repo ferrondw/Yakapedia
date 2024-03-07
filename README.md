@@ -3,15 +3,10 @@
 
 ## Information
 This project is long from complete, and is still going strong on the development part. That said there are some bugs here and there, so apologies for that!
-
-The [wiki](https://github.com/ferrondw/Yakapedia/wiki) has been discontinued.
-
 Anyways a LOT of effort was put into these scripts, so I hope y'all enjoy it!
 
 ## Prerequisites
-You know, I'm not THAT smart, so there are some packages that Yakapedia uses. These include:
-- [Unity](https://unity.com)
-- [Json.Net (Newtonsoft.Json)](https://www.newtonsoft.com/json)
+You know, I'm not THAT smart, so Yakapedia uses [Json.Net (Newtonsoft.Json)](https://www.newtonsoft.com/json) in order to serialize stuff so it can be saved into a file!
 
 ## Installation
 Just download and open the .unitypackage file (you can find it in releases), then import everything into your Unity project!
